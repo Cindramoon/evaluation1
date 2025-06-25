@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Site Responsive</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Mon Site Responsive</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Bienvenue sur mon site</h2>
+            <p>Ceci est un exemple de site qui utilise des techniques de design responsive. Vous verrez ci-dessous quelques morceaux de code avec leurs justifications.</p>
+            
+            <!-- Image d'illustration -->
+            <img src="https://via.placeholder.com/800x400" alt="Illustration">
+
+            <h3>Justification des morceaux de code</h3>
+            <ul>
+                <li><strong>Morceau de Code 1 : Utilisation de la balise viewport</strong></li>
+                <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+                <p>Cette balise définit comment le contenu de la page s'adapte en fonction de la taille de l'écran du périphérique. Elle permet à la page d'être responsive en ajustant le zoom et la largeur selon l'appareil utilisé.</p>
+
+                <li><strong>Morceau de Code 2 : Media Query pour les écrans plus petits</strong></li>
+                <pre><code>@media screen and (max-width: 768px) { body { font-size: 14px; } }</code></pre>
+                <p>Cette règle CSS ajuste la taille de la police pour les écrans dont la largeur est inférieure à 768px (par exemple, les smartphones), afin d'améliorer la lisibilité.</p>
+
+                <li><strong>Morceau de Code 3 : Image de fond avec CSS</strong></li>
+                <pre><code>body { background-image: url('background.jpg'); background-size: cover; }</code></pre>
+                <p>Ce code définit une image de fond pour le corps de la page, avec la propriété `background-size: cover` pour que l'image couvre toute la zone sans distorsion.</p>
+
+                <li><strong>Morceau de Code 4 : Impression de la page avec @print</strong></li>
+                <pre><code>@media print { body { font-size: 12pt; color: black; } }</code></pre>
+                <p>Cette règle définit l'apparence de la page lorsqu'elle est imprimée. Par exemple, ici, la taille de la police est définie en points et la couleur est noire pour un meilleur rendu à l'impression.</p>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mon Site Web. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>
