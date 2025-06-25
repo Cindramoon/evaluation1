@@ -5,7 +5,7 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
-    background-image: url('https://via.placeholder.com/1500x1000'); /* Image de fond */
+    background-image: url('images/background.png'); /* Image de fond */
     background-size: cover;
     background-position: center;
 }
@@ -38,7 +38,7 @@ img {
 }
 
 .code-block img {
-    width: 100%; /* Largeur pleine pour s'adapter à différents écrans */
+    width: 70%; /* Largeur pleine pour s'adapter à différents écrans */
     height: auto;
     border-radius: 8px;
 }
@@ -46,6 +46,9 @@ img {
 ul {
     list-style: none;
     padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
 }
 
 .container {
@@ -59,10 +62,16 @@ footer p {
 
 /* Style d'impression */
 @media print {
+
+    ul li {
+        page-break-inside: avoid;
+    }
+
     body {
         font-size: 12pt;
         color: black;
         background-color: white;
+        background-image: none;
     }
     header, footer {
         display: none; /* Ne pas imprimer le header et le footer */
@@ -71,6 +80,14 @@ footer p {
         background-color: white;
         border: 1px solid #000;
         box-shadow: none;
+    }
+
+    .code-block img {
+        width: 100%;
+    }
+
+    ul {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -84,5 +101,13 @@ footer p {
     }
     .code-block {
         padding: 15px;
+    }
+
+    .code-block img {
+        width: 100%;
+    }
+
+    ul {
+        grid-template-columns: 1fr;
     }
 }
